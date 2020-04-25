@@ -1,0 +1,11 @@
+<h1>SaturnX</h1>
+
+<p>Hi <%= @user.name %>,</p>
+
+<p>
+Benvenuto in SaturnX! Clicca sul link seguente per attivare il tuo account:
+</p>
+
+<%= link_to "Activate", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>
+                                                    
