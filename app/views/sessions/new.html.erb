@@ -1,5 +1,5 @@
-<% provide(:title, "Log in") %>
-<h1>Log in</h1>
+<% provide(:title, "Accedi") %>
+<h1>Entra in SaturnX</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -9,16 +9,17 @@
       <%= f.email_field :email, class: 'form-control' %>
 
       <%= f.label :password %>
+      <%= link_to "(dimenticata la password?)", new_password_reset_path %>
       <%= f.password_field :password, class: 'form-control' %>
       
       <%= f.label :remember_me, class: "checkbox inline" do %>
       <%= f.check_box :remember_me %>
-      <span>Remember me on this computer</span>
+      <span>Ricordami su questo pc</span>
       <% end %>
 
-      <%= f.submit "Log in", class: "btn btn-primary" %>
+      <%= f.submit "Accedi", class: "btn btn-primary" %>
     <% end %>
 
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+    <p>Nuovo utente? <%= link_to "Registrati adesso!", signup_path %></p>
   </div>
 </div>
