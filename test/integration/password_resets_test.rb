@@ -7,7 +7,7 @@ class PasswordResetsTest < ActionDispatch::IntegrationTest
     @user = users(:michael)
   end
 
-  test "password resets" do
+  test "password reset" do
     get new_password_reset_path
     assert_template 'password_resets/new'
     assert_select 'input[name=?]', 'password_reset[email]'
