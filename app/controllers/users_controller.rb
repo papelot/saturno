@@ -9,9 +9,6 @@ class UsersController < ApplicationController
     @users = User.where(activated: true).paginate(page: params[:page])
   end 
   
-  def new
-  end
-  
   def show
     @user = User.find(params[:id])
     redirect_to root_url and return unless @user.activated?

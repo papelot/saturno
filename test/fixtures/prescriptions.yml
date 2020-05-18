@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bc1: 160A2
+  bc2: 1234567890 
+  cf: GSTCRD65D05L049H
+
+due:
+  bc1: 160A2
+  bc2: 0987654321
+  cf: DLPGLI35C62I467D

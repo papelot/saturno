@@ -1,0 +1,10 @@
+<% provide(:title, "Nuova lista ricette") %>
+<h1>Nuova lista ricette</h1>
+
+<%= simple_form_for @prescription do |f| %>
+  <%= f.input :bc1 %>
+  <%= f.input :bc2 %>
+  <%= f.input :cf %>
+  <%= f.button :submit %>
+<% end %>
+
