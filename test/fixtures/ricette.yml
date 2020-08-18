@@ -1,13 +1,19 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  regione: MyString
-  numero: MyString
-  codicefiscale: MyString
+  regione: 160a2
+  numero: 0000000001
+  codicefiscale: gstcrd65d05l049h 
   lista: one
 
 two:
-  regione: MyString
-  numero: MyString
-  codicefiscale: MyString
+  regione: 160a2
+  numero: 0000000002
+  codicefiscale: gstcrd65d05l049h
+  lista: one
+
+three:
+  regione: 160a2
+  numero: 0000000003
+  codicefiscale: gstcrd65d05l049h
   lista: two

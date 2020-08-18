@@ -8,5 +8,6 @@ class CreateRicette < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
+    add_index :ricette, [:liste, :created_at]
   end
 end

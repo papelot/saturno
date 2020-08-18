@@ -10,7 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_29_212946) do
+ActiveRecord::Schema.define(version: 2020_06_16_185456) do
+
+  create_table "liste", force: :cascade do |t|
+    t.text "file"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index "\"user\", \"created_at\"", name: "index_liste_on_user_and_created_at"
+    t.index ["user_id"], name: "index_liste_on_user_id"
+  end
+
+  create_table "ricette", force: :cascade do |t|
+    t.string "regione"
+    t.string "numero"
+    t.string "codicefiscale"
+    t.integer "lista_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index "\"liste\", \"created_at\"", name: "index_ricette_on_liste_and_created_at"
+    t.index ["lista_id"], name: "index_ricette_on_lista_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
@@ -28,4 +48,6 @@ ActiveRecord::Schema.define(version: 2020_04_29_212946) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "liste", "users"
+  add_foreign_key "ricette", "liste"
 end
